@@ -21,7 +21,6 @@ app.use('/src', express.static(path.join(__dirname, '/src')));
 app.use('/views', express.static(path.join(__dirname,'/views')));
 
 //initialise middleware
-app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
