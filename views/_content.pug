@@ -1,0 +1,32 @@
+section.top-container
+    .budget-container
+        .budget-title-container
+            h2.budget-title Budget
+        input#budget-searchbar(type='text', name='', placeholder='Enter your total budget')
+        button#budget-submit(type='submit', title='submit') Submit
+    .expenses-container
+        .expenses-title-container
+            h2.expenses-title Expenses
+        input#expenses-name-searchbar(type='text', name='', placeholder='What is your Expense for?')
+        input#expenses-amount-searchbar(type='text', name='', placeholder='How much is this Expense?')
+        button#expenses-submit(type='submit', title='submit') Submit
+section.middle-container
+    .calculator-container
+        .total-budget-container
+            h3.total-budget Total Budget
+            p.total-budget-amount 0
+        .expenses-calculator-container
+            h3.expenses Expenses
+            p.expenses-amount 0
+        .balance-container
+            h3.balance Balance
+            p.balance-amount 0
+section.bottom-container
+    .list-item-container
+        .list-title-container
+            h2.list-title Expense List
+        .list-item
+            h6.list-name Rent
+            h6.list-amount &pound;950
+            span#add-button.material-symbols-outlined edit_note
+            span#delete-button.material-symbols-outlined delete
