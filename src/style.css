@@ -1,0 +1,280 @@
+
+/* declaring global variables & reset */
+
+:root {
+  --background: linear-gradient(to top left, #7D7973, #E3C9A2);
+  --white: #fff;
+  --black: #000;
+  --grey: #909090;
+  --orange: #ffc876;
+  --lightorange: #FFDBA5;
+  --darkorange: #FFB548;
+  --green: #69DA65;
+  --red: #ff7676;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  height: 100%;
+  background: var(--background) no-repeat center center fixed; /* add 'center center fixed' to center the image */
+  background-size: cover; 
+}
+
+body {
+  font-family: 'Commissioner', sans-serif;
+}
+
+
+/* base styles, containers, general sections and div styling */
+
+.nav-container {
+  display: flex;
+  justify-content: left;
+}
+
+.top-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2em;
+}
+
+.budget-container, .expenses-container {
+  background-color: var(--white);
+  border-radius: 35px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 2em;
+  margin: .5em;
+}
+
+#budget-searchbar, #expenses-name-searchbar, #expenses-amount-searchbar {
+  background-color: var(--grey);
+  color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 12px;
+  border: none;
+  padding: .3em;
+  padding-left: .7em;
+  width: 14em;
+  margin-top: .6em;
+  margin-bottom: .8em;
+}
+
+#budget-submit, #expenses-submit {
+  background-color: var(--orange);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: var(--white);
+  border: none;
+  border-radius: 15px;
+  width: 5rem;
+  padding: .3em 1em;
+}
+
+#budget-submit:hover, #expenses-submit:hover {
+  background-color: var(--darkorange)
+}
+
+#budget-submit:active, #expenses-submit:active {
+  background-color: var(--lightorange)
+}
+
+.middle-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+}
+
+.calculator-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--orange);
+  transition: background-color 0.5s ease;
+  border-radius: 40px;
+  width: 70%;
+}
+
+
+.total-budget-container, .expenses-calculator-container, .balance-container {
+  color: var(--white);
+  text-align: center;
+  margin: 1em;
+  padding: .7em;
+}
+
+.bottom-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2em;
+}
+
+.list-item-container {
+  background-color: var(--white);
+  border-radius: 35px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 1em;
+  margin-bottom: 2em;
+  width: 90%;
+}
+
+.list-title-container {
+  margin: 1em;
+}
+
+.list-item {
+  display: flex;
+  justify-content:space-around;
+  background-color: var(--grey);
+  border-radius: 30px;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+/* font styling and sizing */
+
+.logo {
+  font-size: 1em;
+  font-weight: 500;
+  margin-left: .6em;
+  margin-top: .6em;
+}
+
+.budget-title, .expenses-title {
+  font-size: 1.3em;
+  margin-bottom: .5em;
+}
+
+#budget-searchbar::placeholder, #expenses-name-searchbar::placeholder, #expenses-amount-searchbar::placeholder {
+  color: var(--white);
+}
+
+.middle-container h3 {
+  text-align: center;
+}
+
+.total-budget-amount {
+
+}
+
+.expenses-amount {
+
+}
+
+.balance-amount {
+
+}
+
+.list-name, .list-amount {
+  color: var(--white);
+  font-size: .8em;
+  padding-top: .2em;
+}
+
+#add-button, #delete-button {
+  cursor: pointer;
+  color: var(--white)
+}
+
+#add-button:hover, #delete-button:hover {
+  cursor: pointer;
+  color: var(--lightorange);
+}
+
+#add-button:active, #delete-button:active {
+  cursor: pointer;
+  color: var(--darkorange);
+}
+
+
+.credit {
+  color: var(--white);
+  margin-bottom: 1em;
+}
+
+/* media queries */
+
+/* tablet styles */
+@media screen and (min-width: 1024px) {
+
+  /* global styles */
+
+    body {
+      font-size: 120%;
+    }
+
+    /* base styles */
+
+    #budget-searchbar, #expenses-name-searchbar, #expenses-amount-searchbar {
+      background-color: var(--grey);
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 12px;
+      border: none;
+      padding: .3em;
+      padding-left: .7em;
+      width: 14em;
+      margin-top: .6em;
+      margin-bottom: .8em;
+    }
+    
+    #budget-submit, #expenses-submit {
+      background-color: var(--orange);
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      color: var(--white);
+      border: none;
+      border-radius: 15px;
+      width: 5rem;
+      padding: .3em 1em;
+    }
+    
+    .bottom-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 2em;
+    }
+    
+    .list-item-container {
+      background-color: var(--white);
+      border-radius: 35px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      padding: 1.3em;
+      margin-bottom: 2em;
+      width: 90%;
+    }
+    
+    .list-title-container {
+      margin-bottom: 3em;
+    }
+    
+    .list-item {
+      display: flex;
+      justify-content:space-around;
+      background-color: var(--grey);
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 30px;
+      margin-bottom: 1em;
+      padding: .3em;
+      width: 100%;
+    }
+    
+    .footer {
+      display: flex;
+      justify-content: center;
+    }
+    
+
+}
