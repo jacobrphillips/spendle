@@ -60,14 +60,28 @@
             </div>
             <!-- <div class="list-item">
                 <h6 class="list-name">Rent</h6>
-                <h6 class="list-amount">£950</h6>
-                <span id="add-button" class="material-symbols-outlined">edit_note</span>
-                <span id="delete-button" class="material-symbols-outlined">delete</span>
+                <h6 class="list-amount">950</h6> -->
+                <!-- <span width="0" height="0" id="add-button" data-modal-target="#modal" class="material-symbols-outlined"></span> -->
+                <!-- <span id="delete-button" class="material-symbols-outlined">delete</span>
             </div> -->
         </div>
     </section>
     <footer class="footer">
         <h6 class="credit">made by Jacob Phillips</h6>
     </footer>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <h2 class="title">Change Expense Info</h2>
+        <button class="close-button" data-close-button="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        <input type="text" name="" id="update-expense-name-searchbar" placeholder="What is your Expense for?">
+        <input type="text" name="" id="update-expense-amount-searchbar" placeholder="How much is this Expense?">
+        <button type="submit" title="submit" id="update-expenses-submit">Submit</button>
+      </div>
+    </div>
+    <div id="overlay"></div>
   </body>
+
+
 </html>

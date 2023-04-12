@@ -34,7 +34,7 @@ exports.makeExpense = (req, res) => {
     const { id } = req.params;
     const { expense_name, expense_amount } = req.body;
     const query =
-      "INSERT INTO expenses (expense_name, expense_amount) VALUES ($1, $2) RETURNING expense_name, expense_amount";
+      "INSERT INTO expenses (expense_name, expense_amount) VALUES ($1, $2) RETURNING expense_id, expense_name, expense_amount";
     pool.query(query, [expense_name, expense_amount], (err, result) => {
       if (err) {
         console.error(err);
@@ -48,15 +48,16 @@ exports.makeExpense = (req, res) => {
 
 exports.patchExpense = (req, res) => {
     const { id } = req.params;
-    const { expense_name, expense_amount } = req.body;
+    const { expense_id, expense_name, expense_amount } = req.body;
     const query =
-      "UPDATE expenses SET expense_name = $1, expense_amount = $2 WHERE expense_id = $3";
-    pool.query(query, [expense_name, expense_amount, id], (err, result) => {
+      "UPDATE expenses SET expense_name = COALESCE($1, expense_name), expense_amount = COALESCE($2, expense_amount) WHERE expense_id = $3 RETURNING *";
+    pool.query(query, [expense_name || null, expense_amount || null, expense_id], (err, result) => {
       if (err) {
         console.error(err);
         res.sendStatus(500);
       } else {
-        res.status(201).json(result.rows[0]);
+        const newExpense = result.rows[0]
+        res.send(newExpense);
       }
     });
   }
@@ -72,7 +73,7 @@ exports.putExpense = (req, res) => {
         res.sendStatus(500);
       } else {
         const expenses = result.rows[0];
-        res.status(201).json(expenses);
+        res.status(201).send(expenses);
       }
     });
   }
