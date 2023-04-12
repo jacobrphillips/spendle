@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script defer src="./../src/index.js"></script>
+    <title>spendle | Budget & Expense Tracking</title>
+  </head>
+  <body>
+    <nav class="nav-container">
+      <h1 class="logo">spendle</h1>
+    </nav>
+    <section class="top-container">
+      <div class="budget-container">
+        <div class="budget-title-container">
+            <h2 class="budget-title">Budget</h2>
+        </div>
+        <input type="text" name="" id="budget-searchbar" placeholder="Enter your total budget"/>
+        <button type="submit" title="submit" id="budget-submit">Submit</button>
+      </div>
+      <div class="expenses-container">
+        <div class="expenses-title-container">
+            <h2 class="expenses-title">Expenses</h2>
+        </div>
+        <input type="text" name="" id="expenses-name-searchbar" placeholder="What is your Expense for?">
+        <input type="text" name="" id="expenses-amount-searchbar" placeholder="How much is this Expense?">
+        <button type="submit" title="submit" id="expenses-submit">Submit</button>
+      </div>
+    </section>
+    <section class="middle-container">
+        <div class="calculator-container">
+            <div class="total-budget-container">
+                <h3 class="total-budget">Total Budget</h3>
+                <p class="total-budget-amount">0</p>
+            </div>
+            <div class="expenses-calculator-container">
+                <h3 class="expenses">Expenses</h3>
+                <p class="expenses-amount">0</p>
+            </div>
+            <div class="balance-container">
+                <h3 class="balance">Balance</h3>
+                <p class="balance-amount">0</p>
+            </div>
+          </div>
+    </section>
+    <section class="bottom-container">
+        <div class="list-item-container">
+            <div class="list-title-container">
+                <h2 class="list-title">Expense List</h2>
+            </div>
+            <!-- <div class="list-item">
+                <h6 class="list-name">Rent</h6>
+                <h6 class="list-amount">£950</h6>
+                <span id="add-button" class="material-symbols-outlined">edit_note</span>
+                <span id="delete-button" class="material-symbols-outlined">delete</span>
+            </div> -->
+        </div>
+    </section>
+    <footer class="footer">
+        <h6 class="credit">made by Jacob Phillips</h6>
+    </footer>
+  </body>
+</html>
