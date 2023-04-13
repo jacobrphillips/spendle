@@ -33,9 +33,7 @@ body {
 
 /* base styles, containers, general sections and div styling */
 
-.total-budget, .expenses, .balance {
-  color: var(--white);
-}
+
 
 .nav-container {
   display: flex;
@@ -68,10 +66,14 @@ body {
   margin: 0.5em;
 }
 
+.budget-title, .expenses-title, .list-title {
+  color: var(--white);
+}
+
 #budget-searchbar,
 #expenses-name-searchbar,
 #expenses-amount-searchbar {
-  background-color: var(--white);
+  background-color:#43423c;
   color: var(--white);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 12px;
@@ -281,8 +283,13 @@ body {
 
 .budget-title,
 .expenses-title {
+  color: var(--white);
   font-size: 1.3em;
   margin-bottom: 0.5em;
+}
+
+.budget-title, .expenses-title, .list-title {
+  color: var(--white);
 }
 
 #budget-searchbar::placeholder,
